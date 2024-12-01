@@ -1,1 +1,1 @@
-api: sh setup.sh && python api_complet_light.py
+api: python api_complet_light.py
