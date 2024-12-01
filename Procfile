@@ -1,0 +1,1 @@
+api: sh setup.sh && python api_complet_light.py
