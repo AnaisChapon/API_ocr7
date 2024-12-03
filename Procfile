@@ -1,1 +1,1 @@
-api: python api_complet_light.py
+web: python api_complet_light.py
