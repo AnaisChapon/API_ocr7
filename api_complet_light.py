@@ -6,8 +6,9 @@ import os
 
 app = Flask(__name__)
 
-# Charger le modèle
-model_path = '/home/achapon/dashboard_ocr7/model.pkl'
+# Définir les chemins en fonction du répertoire actuel
+model_path = os.path.join(os.getcwd(), 'model.pkl')
+
 model = joblib.load(model_path)
 
 @app.route("/predict", methods=['POST'])
@@ -18,7 +19,7 @@ def predict():
         print("Received SK_ID_CURR:", sk_id_curr)
 
         # Charger le dataset complet pour obtenir les données de fond
-        csv_path = '/home/achapon/dashboard_ocr7/application_train_light_light.csv'
+        csv_path = os.path.join(os.getcwd(), 'application_train_light_light.csv')
         df = pd.read_csv(csv_path)
         print("DataFrame loaded successfully.")
 
